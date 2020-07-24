@@ -1,3 +1,5 @@
+package object_oriented_programming;
+
 public class Car {
     public Car() {
         wheels = 4;
@@ -7,12 +9,12 @@ public class Car {
         platform_weight = 500;
     }
 
-    private int wheels, length, width, motor, platform_weight, total_weight, price_car;
+    private int wheels, length, width, motor, platform_weight, total_weight;
     private String color;
     boolean fragance, leather_seats;
 
     public String getGeneralData() {
-        return "The car has " + wheels + "wheels.\nThe car's length is " + length + ".\nThe car's width is " + width + ".\nThe car's motor is "
+        return "The car has " + wheels + " wheels.\nThe car's length is " + length + ".\nThe car's width is " + width + ".\nThe car's motor is "
         + motor + ".\nThe car's platform weight is " + platform_weight + ".";
     }
 
