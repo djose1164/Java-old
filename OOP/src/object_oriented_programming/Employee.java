@@ -1,6 +1,6 @@
 package object_oriented_programming;
 
-public class Employee implements Comparable {
+public class Employee implements Comparable, Workers {
     Employee(String nameString, String departmentString, String cityString, double salary) {
         name = nameString;
         this.salary = salary;
@@ -13,11 +13,6 @@ public class Employee implements Comparable {
     Employee(String nameString) {
         this(nameString, "Human Resources", "Santo Domingo", 30000);
     }
-
-    private String name, department, city;
-    private int ID;
-    private double salary;
-    private static int IDNext = 1;
 
     public String getNameString() {
         return name;
@@ -44,6 +39,9 @@ public class Employee implements Comparable {
     }
 
     public double getSalaryDouble() {
+        /**
+         * Return the salary in double value.
+         */
         return salary;
     }
 
@@ -59,4 +57,15 @@ public class Employee implements Comparable {
 
         return 0;
     }
+
+    public double setGratificationDouble(double mount) {
+        // TODO Auto-generated method stub
+        return Workers.gift + mount;
+    }
+
+ 
+    private String name, department, city;
+    private int ID;
+    private double salary;
+    private static int IDNext = 1;
 }
