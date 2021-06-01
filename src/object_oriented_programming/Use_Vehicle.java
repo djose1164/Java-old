@@ -8,22 +8,22 @@ public class Use_Vehicle {
 
         myCar.setColorString("Black");
 
-        myCar.configureLetherSeats(true);
+        myCar.configureLeatherSeats(true);
 
-        myCar.configureFragance(false);
+        myCar.configureFragrance(false);
 
         myCar.setTotalPrice();
 
         myCar.setTotalWeight();
 
-        JOptionPane.showMessageDialog(null, myCar.getGeneralData() + "\n" + myCar.getColorString() + "\n" + myCar.getConfigureFraganceString()
+        JOptionPane.showMessageDialog(null, myCar.getGeneralData() + "\n" + myCar.getColorString() + "\n" + myCar.getConfigureFragranceString()
         + myCar.getConfigureSeatsString(), "Car's information", JOptionPane.INFORMATION_MESSAGE);
         
         Van myVan = new Van(5, 500);
 
         myVan.setColorString("Red");
         
-        myVan.configureLetherSeats(false);
+        myVan.configureLeatherSeats(false);
 
         JOptionPane.showMessageDialog(null, myVan.getGeneralData() + "\n" + myVan.getCapacityLoadString() + "\n" + myVan.getExtraPlaceString());
     }

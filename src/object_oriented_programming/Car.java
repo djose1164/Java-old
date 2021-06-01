@@ -9,9 +9,13 @@ public class Car {
         platform_weight = 500;
     }
 
-    private int wheels, length, width, motor, platform_weight, total_weight;
+    private final int wheels;
+    private final int length;
+    private final int width;
+    private final int motor;
+    private final int platform_weight;
     private String color;
-    boolean fragance, leather_seats;
+    boolean fragrance, leather_seats;
 
     public String getGeneralData() {
         return "The car has " + wheels + " wheels.\nThe car's length is " + length + ".\nThe car's width is " + width + ".\nThe car's motor is "
@@ -26,21 +30,12 @@ public class Car {
         return "The car's color is " + color;
     }
 
-    public void configureFragance(boolean status) {
-        if (status) {
-            fragance = true;
-        } else {
-            fragance = false;
-        }
+    public void configureFragrance(boolean status) {
+        fragrance = status;
     }
 
-    public void configureLetherSeats(boolean status) {
-        if (status) {
-            leather_seats = true;
-
-        } else {
-            leather_seats = false;
-        }
+    public void configureLeatherSeats(boolean status) {
+        leather_seats = status;
     }
 
     public String getConfigureSeatsString() {
@@ -51,17 +46,18 @@ public class Car {
         }
     }
 
-    public String getConfigureFraganceString() {
-        if (fragance) {
-            return "The car has fragance installed!";
+    public String getConfigureFragranceString() {
+        if (fragrance) {
+            return "The car has fragrance installed!";
         } else {
-            return "The car dont have fragance installed!";
+            return "The car dont have fragrance installed!";
         }
     }
 
-    public String setTotalPrice() {
+    public void setTotalPrice() {
         int accumulated = 2000;
-        if (fragance) {
+        if (fragrance)
+        {
             accumulated += 500;
         }
         
@@ -69,12 +65,11 @@ public class Car {
             accumulated += 1000;
         }
 
-        return "The total price is " + accumulated;
     }
 
-    public String setTotalWeight() {
-        total_weight = platform_weight;
-        if (fragance) {
+    public void setTotalWeight() {
+        int total_weight = platform_weight;
+        if (fragrance) {
             total_weight += 100;
         }
 
@@ -82,6 +77,5 @@ public class Car {
             total_weight += 300;
         }
 
-        return "The car's total weight is " + total_weight;
     }
 }

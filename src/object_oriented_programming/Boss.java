@@ -15,8 +15,8 @@ public class Boss extends Employee implements Bosses {
         return incentive;
     }
 
-    public String takeDesicionString(String desicionString) {
-        return "A member from the direction has token a desicion of: " + desicionString;
+    public String takeDecisionString(String decisionString) {
+        return "A member from the direction has token a decision of: " + decisionString;
     }
 
     public double setGratificationDouble(double mount) {

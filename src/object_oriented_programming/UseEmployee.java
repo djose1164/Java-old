@@ -10,7 +10,7 @@ public class UseEmployee {
         Boss djoseBoss = new Boss("Jose Daniel", "President", "Santo Domingo", 509500);
         djoseBoss.setIncentive(5509.100);
 
-        JOptionPane.showMessageDialog(null, djoseBoss.takeDesicionString("More work for everyone! :D"));
+        JOptionPane.showMessageDialog(null, djoseBoss.takeDecisionString("More work for everyone! :D"));
 
         for (int i = 0; i < myEmployee.length; i++) {
             myEmployee[i] = new Employee(JOptionPane.showInputDialog(null, "Type employee's name", "Name", JOptionPane.INFORMATION_MESSAGE));
